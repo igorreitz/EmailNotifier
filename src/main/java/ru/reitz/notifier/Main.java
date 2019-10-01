@@ -1,10 +1,11 @@
 package ru.reitz.notifier;
 
-import ru.reitz.notifier.util.EmailSender;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        EmailSender emailSender = new EmailSender("my-notifier@mail.ru","pochtAMPT");
-        emailSender.send("test", "body","raits@ngs.ru");
+        SpringApplication.run(Main.class, args);
     }
 }
